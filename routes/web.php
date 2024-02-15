@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< Updated upstream
 use App\Http\Controllers\Admin\{AuthController, ProfileController, UserController};
+=======
+use App\Http\Controllers\LoginController;
+>>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +18,7 @@ use App\Http\Controllers\Admin\{AuthController, ProfileController, UserControlle
 |
 */
 
+<<<<<<< Updated upstream
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,3 +26,8 @@ Route::get('/', function () {
 Route::get('/admin/dashboard', [ProfileController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/admin/user', [ProfileController::class, 'user'])->name('user');
+=======
+Route::get('/',[LoginController::class,'index'])->name('index');
+Route::post('/',[LoginController::class,'register'])->name('register');
+Route::get('/user',[LoginController::class,'user'])->name('user');
+>>>>>>> Stashed changes
