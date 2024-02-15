@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+  --white: #EEEEEE;
+  --blue: #362FD9;
+  --sksyblue: #1AACAC;
+  --teal: #2E97A7;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  background-image: url('');
+  background-size: cover;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0%;
+  padding: 0%;
+}
+
+.containers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 40%;
+  --s: 84px; /* control the size*/
+  --c1: #f2f2f2;
+  --c2: #cdcbcc;
+  --c3: #999999;
+  
+  --_g: 0 120deg,#0000 0;
+  background:
+    conic-gradient(from    0deg at calc(500%/6) calc(100%/3),var(--sksyblue) var(--_g)),
+    conic-gradient(from -120deg at calc(100%/6) calc(100%/3),var(--teal) var(--_g)),
+    conic-gradient(from  120deg at calc(100%/3) calc(500%/6),var(--sksyblue) var(--_g)),
+    conic-gradient(from  120deg at calc(200%/3) calc(500%/6),var(--sksyblue) var(--_g)),
+    conic-gradient(from -180deg at calc(100%/3) 50%,var(--teal)  60deg,var(--sksyblue) var(--_g)),
+    conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
+    conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
+  background-size: calc(var(--s)*1.732) var(--s);
+}
+.left-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('/images/bg-wallpaper.jpg');
+  filter: blur(4px);
+  -webkit-filter: blur(3px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60%; 
+}
+.login-form, .registration-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  background-color: var(--white);
+  z-index: 1;
+}
+.registration-form h2{
+  color: var(--teal);
+}
+.containers .login-form, .containers .registration-form{
+  min-height: 450px;
+  width: 60%;
+  border: 1px solid var(--white);
+  border-radius: 6%;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+}
+.containers .registration-form{
+  display: none;
+}
+#check:checked ~ .registration-form{
+  display: block;
+}
+#check:checked ~ .login-form{
+  display: none;
+}
+#check{
+  display: none;
+}
+.logo{
+  height: 130px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.big-logo{
+  position: absolute;
+  left: 8%;
+  height: 400px;
+  width: 40%;
+  z-index: 0; 
+}
+.logo img{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.form-floating{
+  width: 350px;
+  margin-bottom: 1rem;
+}
+.form-floating a{
+  text-decoration: none;
+}
+.form button{
+  background-color: var(--sksyblue);
+  border-radius: 5.8%;
+  width: 100%;
+  font-weight: bold;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+}
+.form button:hover{
+  background-color: var(--blue);
+  color: var(--teal);
+  transition: background-color 250ms;
+}
+.signup, .pass-forgot{
+  font-size: 17px;
+  text-align: center;
+}
+.signup label, .pass-forgot{
+  color: var(--sksyblue);
+  cursor: pointer;
+}
+.signup label:hover, .pass-forgot:hover{
+  text-decoration: underline;
+  color: var(--blue);
+}
